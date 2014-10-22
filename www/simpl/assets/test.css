@@ -1,0 +1,19 @@
+/*
+#menu{
+   position: relative;
+   right: -50%;
+   margin: 0; // Обнуляем значение отступов
+   padding: 5px; // Значение полей
+}
+#dm{
+    position: relative;
+   right: 50%;
+   float: right;
+}
+#menu li {
+    display: inline; // Отображать как строчный элемент 
+    padding-left: 40px;
+    padding-right: 40px;
+    
+   }
+*/
