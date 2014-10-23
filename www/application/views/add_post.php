@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<div class="ckeblock">
 <form action="" method="post">
     <div id="art">
     <div class="post">
@@ -25,6 +26,7 @@
     </div>
     </div>
 </form>
+</div>
 </body>
 
 </html>

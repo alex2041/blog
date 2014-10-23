@@ -28,7 +28,7 @@
        public function updatepost(){
         if (isset($_POST['title'], $_POST['content'], $_POST['id_cat'])){
             $title = $_POST['title'];
-            $contet = nl2br($_POST['content']);
+            $contet = $_POST['content'];
             $id = $_POST['id'];
             $id_cat = $_POST['id_cat'];
             if(empty($title) or empty($contet)){
@@ -49,7 +49,7 @@
        public function addpost(){
         if (isset($_POST['title'], $_POST['content'], $_POST['id_cat'])){
             $title = $_POST['title'];
-            $contet = nl2br($_POST['content']);
+            $contet = $_POST['content'];
             $id_cat = $_POST['id_cat'];
             if(empty($title) or empty($contet)){
                 $error = 'All field are required';
