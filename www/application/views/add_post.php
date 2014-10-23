@@ -4,7 +4,8 @@
 <head>
     <title>CMS</title>
     <link rel="stylesheet" href="../assets/style.css" />
-    <link rel="stylesheet" href="../assets/style41.css">
+    <link rel="stylesheet" href="../assets/style41.css"/>
+    <script src="//cdn.ckeditor.com/4.4.5/full/ckeditor.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,8 @@
         <input type="text" name="title" value=""/></p>
         <p>Категория:
         <input type="text" name="id_cat" value=""/></p>
-        <textarea rows="15" cols="50" name="content"></textarea>
+        <textarea rows="15" cols="50" name="content" id="editor"></textarea>
+        <script>CKEDITOR.replace( 'editor' );</script>
         <input type="submit" value="update!"/>
     </div>
     </div>
