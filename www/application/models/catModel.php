@@ -11,7 +11,7 @@
        }
        /* Выборка всех категорий */
 	   public function fetch_cat(){  
-        $query = $this->pdo->prepare('SELECT a.id,a.name,a.id_cat,b.name_block,b.id_cat,b.id
+        $query = $this->pdo->prepare('SELECT a.id,a.name,a.id_cat,b.name_block,b.id_cat
                                       FROM category a
                                       JOIN block b ON b.id_cat = a.id_cat ORDER BY a.id_cat DESC');
         $query->execute();

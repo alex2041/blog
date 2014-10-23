@@ -25,6 +25,8 @@
     }
     echo '</div>';
     }?>
+    <pre><?print_r($this->cat)?></pre>
+    
     
 </div>
 </div>
