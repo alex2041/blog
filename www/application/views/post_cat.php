@@ -7,7 +7,7 @@
 <a href="/post/get/id/<?php echo $article['id']; ?>"><?php echo $article['title']; ?></a>
 </div>
 <div id="text">
-<p><?php echo $article['content']; ?></p>
+<?php echo $article['content']; ?>
 </div>
 </div>
 </div>

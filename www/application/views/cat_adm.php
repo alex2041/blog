@@ -19,12 +19,10 @@
             if($block['id_cat']==$cat['id_cat']){
                 echo '<p><a href="/admin/upcat/id/'.$cat['id'].'">'.$cat['name'].'</a></p>';
             }
-            
-    //echo '<p>Блок:'.$cat['name_block'].'<a href="/admin/upcat/id/'.$cat['id'].'">'.$cat['name'].'</a></p>';
-    
-    }
+           }
     echo '</div>';
-    }?>
+    }
+    ?>
 </div>
 </div>
 </body>

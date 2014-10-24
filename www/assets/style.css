@@ -3,7 +3,6 @@ body{
     font-family: Arial;
     font-weight: bold;
     margin: 0 auto;
-    height: 1200px;
     width: 500px;
 }
 .block {
@@ -23,7 +22,6 @@ body{
     outline: none;
     font-weight: bold;
 }
-
 
 .container li{
     padding-left: 25px;

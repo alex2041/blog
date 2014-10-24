@@ -6,7 +6,7 @@
 <?php echo $this->art['title']; ?>
 </div>
 <div id="text">
-<p><?php echo $this->art['content']; ?></p>
+<?php echo $this->art['content']; ?>
 </div>
 </div>
 </div>
