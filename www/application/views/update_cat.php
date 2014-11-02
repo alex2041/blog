@@ -17,7 +17,17 @@
         <p>Название:
         <input type="text" name="name" value="<?=$this->cat['name']; ?>"/></p>
         <p>Блок:
-        <input type="text" name="id_cat" value="<?=$this->cat['id_cat']; ?>"/></p>
+        <select size="1" name="id_cat">
+            <?php
+            foreach($this->block as $block){
+            if($this->cat['id_cat']!==$block['id']){
+                echo '<option value="'.$block['id'].'">'.$block['name_block'].'</option>';
+            }else{
+                echo '<option selected value="'.$this->cat['id_cat'].'">'.$block['name_block'].'</option>';
+            }
+            }
+            ?>
+        </select></p>
         <input type="submit" value="update!"/>
         <a href="/admin/delcat/id/<?=$this->cat['id']?>" id="logo">DELETE!!!!!!!</a>
     </div>

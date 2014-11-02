@@ -4,8 +4,7 @@
          $('ul',this).stop(true,true).slideDown(400);
       }, function () {
         $.data(this,'timer', setTimeout($.proxy(function() {
-          $('ul',this).stop(true,true).slideUp(400);
-        }, this), 100));
+          $('ul',this).stop(true,true).slideUp(40);
+        }, this), 1000));
       });
-
     });

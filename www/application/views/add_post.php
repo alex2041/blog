@@ -19,7 +19,14 @@
         <p>Название:
         <input type="text" name="title" value=""/></p>
         <p>Категория:
-        <input type="text" name="id_cat" value=""/></p>
+        <select size="1" name="id_cat">
+            <option disabled selected>Выбери категорию</option>
+            <?php
+            foreach($this->cat as $cat){
+                echo '<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
+            }
+            ?>
+        </select></p> 
         <textarea rows="15" cols="50" name="content" id="editor"></textarea>
         <script>CKEDITOR.replace( 'editor' );</script>
         <input type="submit" value="update!"/>

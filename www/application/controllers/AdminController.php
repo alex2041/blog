@@ -44,8 +44,9 @@ class AdminController implements IController {
 		$fc = FrontController::getInstance();
         self::log();
         $params = $fc->getParams();
-		$model = new postModel();
+		$model = new catModel();
         $model->updatepost();
+        $model->fetch_cat();
         $model->fetch_data($params['id']);
 		$output = $model->render(UPDATE_POST);
         $fc->setBody($output);
@@ -55,9 +56,10 @@ class AdminController implements IController {
 		$fc = FrontController::getInstance();
         self::log();
         $params = $fc->getParams();
-		$model = new catModel();
+		$model = new blockModel();
         $model->upcat();
         $model->cat_id($params['id']);
+        $model->fetch_block();
 		$output = $model->render(UPDATE_CAT);
         $fc->setBody($output);
     }
@@ -77,7 +79,8 @@ class AdminController implements IController {
     public function addpostAction() {
 		$fc = FrontController::getInstance();
         self::log();
-		$model = new postModel();
+		$model = new catModel();
+        $model->fetch_cat();
         $model->addpost();
 		$output = $model->render(ADD_POST);
         $fc->setBody($output);
@@ -86,8 +89,9 @@ class AdminController implements IController {
     public function addcatAction() {
 		$fc = FrontController::getInstance();
         self::log(); 
-		$model = new catModel();
+		$model = new blockModel();
         $model->addcat();
+        $model->fetch_block();
 		$output = $model->render(ADD_CAT);
         $fc->setBody($output);
     }

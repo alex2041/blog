@@ -18,7 +18,17 @@
         <p>Название:
         <input type="text" name="title" value="<?=$this->art['title']; ?>"/></p> 
         <p>Категория:
-        <input type="text" name="id_cat" value="<?=$this->art['id_cat']; ?>"/></p> 
+        <select size="1" name="id_cat">
+            <?php
+            foreach($this->cat as $cat){
+            if($this->art['id_cat']!==$cat['id']){
+                echo '<option value="'.$cat['id'].'">'.$cat['name'].'</option>';
+            }else{
+                echo '<option selected value="'.$this->art['id_cat'].'">'.$cat['name'].'</option>';
+            }
+            }
+            ?>
+        </select></p> 
         <textarea rows="15" cols="50" name="content" id="editor"><?=$this->art['content']; ?></textarea>
         <script>CKEDITOR.replace( 'editor' );</script>
         <input type="submit" value="update!"/>

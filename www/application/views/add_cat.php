@@ -17,7 +17,14 @@
         <p>Название:
         <input type="text" name="name" value="<?=$this->cat['name']; ?>"/></p>
         <p>Блок:
-        <input type="text" name="id_cat" value="<?=$this->cat['id_cat']; ?>"/></p>
+        <select size="1" name="id_cat">
+            <option disabled selected>Выбери блок</option>
+            <?php
+            foreach($this->block as $block){
+                echo '<option value="'.$block['id'].'">'.$block['name_block'].'</option>';
+            }
+            ?>
+        </select></p>
         <input type="submit" value="update!"/>
     
     </div>

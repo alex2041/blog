@@ -17,7 +17,9 @@
         <p>Название:
         <input type="text" name="name_block" value="<?=$this->block['name_block']; ?>"/></p>
         <p>Блок:
-        <input type="text" name="id_cat" value="<?=$this->block['id_cat']; ?>"/></p>
+        <select size="1" name="id_cat">
+            <option selected value="<?=$this->block['id_cat']; ?>"><?=$this->block['id_cat']; ?></option>
+        </select></p>
         <input type="submit" value="update!"/>
         <!--<a href="/admin/delcat/id/<?=$this->block['id']?>" id="logo">DELETE!!!!!!!</a>-->
     </div>
